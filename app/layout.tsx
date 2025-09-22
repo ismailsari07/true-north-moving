@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bricolageGrotesque = Bricolage_Grotesque({
+  variable: "--font-bricolage-sans",
   subsets: ["latin"],
 });
 
@@ -25,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${bricolageGrotesque.variable} ${geistMono.variable} antialiased font-sans`}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
