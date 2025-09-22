@@ -72,8 +72,13 @@ export default function Services() {
         {/* Card 3 */}
         <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
           <div className="relative h-48 w-full overflow-hidden">
-            {/* Gölge geçişli boş görsel alanı (placeholding gradient) */}
-            <div className="h-full w-full bg-gradient-to-b from-slate-200 to-slate-100" />
+            <Image
+              src="/packing.jpg"
+              alt="Office Relocations"
+              width={500}
+              height={500}
+              className="h-full w-full object-cover"
+            />
           </div>
           <div className="p-6">
             <h3 className="text-xl font-semibold text-slate-900">
@@ -94,7 +99,14 @@ export default function Services() {
         {/* Card 3 */}
         <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
           <div className="relative h-48 w-full overflow-hidden">
-            {/* Gölge geçişli boş görsel alanı (placeholding gradient) */}
+          
+            <Image
+              src="/long-distance.jpg"
+              alt="Office Relocations"
+              width={500}
+              height={500}
+              className="h-full w-full object-cover"
+            />
             <div className="h-full w-full bg-gradient-to-b from-slate-200 to-slate-100" />
           </div>
           <div className="p-6">
