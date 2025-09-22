@@ -1,21 +1,48 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 export default function Services() {
+  const container = {
+    hidden: { opacity: 1 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15, delayChildren: 0.1 },
+    },
+  };
+
+  const item: Variants = {
+    hidden: { opacity: 0, y: 24 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+    },
+  };
   return (
-    <section className="container flex flex-col gap-4 py-16 md:py-32">
-      <p className="mb-6 text-5xl font-bold">Our Services</p>
-      <p className="mb-6 text-xl font-semibold">
+    <motion.section
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      className="container flex flex-col gap-4 py-16 md:py-32"
+    >
+      <motion.p variants={item} className="mb-6 text-5xl font-bold">
+        Our Services
+      </motion.p>
+      <motion.p variants={item} className="mb-6 text-xl font-semibold">
         At TrueNorthMoving, we provide reliable moving solutions tailored to
         your needs. From residential and office relocations to expert packing
         support, our team ensures every move is smooth, efficient, and
         stress-free.
-      </p>
+      </motion.p>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <motion.div variants={container} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {/* Card 1 */}
-        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <motion.div variants={item} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
           <div className="relative h-48 w-full overflow-hidden">
             <Image
               src="/hero3.jpg"
@@ -26,24 +53,24 @@ export default function Services() {
             />
           </div>
           <div className="p-6">
-            <h3 className="text-xl font-semibold text-slate-900">
+            <motion.p variants={item} className="text-xl font-semibold text-slate-900">
               Residential Moves
-            </h3>
-            <p className="mt-2 text-slate-600">
+            </motion.p>
+            <motion.p variants={item} className="mt-2 text-slate-600">
               From studios to family homes, we make moving day smooth and
               stress-free.
-            </p>
+            </motion.p>
 
-            <div className="mt-5 flex items-center gap-3">
+            <motion.div variants={item} className="mt-5 flex items-center gap-3">
               <Link href="/contact">
                 <Button>Request Service</Button>
               </Link>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Card 2 */}
-        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <motion.div variants={item} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
           <div className="relative h-48 w-full overflow-hidden">
             <Image
               src="/hero4.jpg"
@@ -54,23 +81,23 @@ export default function Services() {
             />
           </div>
           <div className="p-6">
-            <h3 className="text-xl font-semibold text-slate-900">
+            <motion.p variants={item} className="text-xl font-semibold text-slate-900">
               Office Relocations
-            </h3>
-            <p className="mt-2 text-slate-600">
+            </motion.p>
+            <motion.p variants={item} className="mt-2 text-slate-600">
               Keep business running with organized, efficient office moves.
-            </p>
+            </motion.p>
 
-            <div className="mt-5 flex items-center gap-3">
+            <motion.div variants={item} className="mt-5 flex items-center gap-3">
               <Link href="/contact">
                 <Button>Request Service</Button>
               </Link>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Card 3 */}
-        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <motion.div variants={item} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
           <div className="relative h-48 w-full overflow-hidden">
             <Image
               src="/packing.jpg"
@@ -81,23 +108,23 @@ export default function Services() {
             />
           </div>
           <div className="p-6">
-            <h3 className="text-xl font-semibold text-slate-900">
+            <motion.p variants={item} className="text-xl font-semibold text-slate-900">
               Packing Support
-            </h3>
-            <p className="mt-2 text-slate-600">
+            </motion.p>
+            <motion.p variants={item} className="mt-2 text-slate-600">
               Careful packing supplies and help to protect what matters most.
-            </p>
+            </motion.p>
 
-            <div className="mt-5 flex items-center gap-3">
+            <motion.div variants={item} className="mt-5 flex items-center gap-3">
               <Link href="/contact">
                 <Button>Request Service</Button>
               </Link>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Card 3 */}
-        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <motion.div variants={item} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
           <div className="relative h-48 w-full overflow-hidden">
           
             <Image
@@ -124,8 +151,8 @@ export default function Services() {
               </Link>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 }

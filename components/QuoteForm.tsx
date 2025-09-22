@@ -32,20 +32,16 @@ export default function QuoteForm() {
       const serviceId = "service_osojcc6";
       const templateId = "template_tx7i73h";
       const publicKey = "jzpQxFz50l4OgTYji";
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          name: payload.fullname,
-          email: payload.email,
-          phone: payload.phoneNumber,
-          date: payload.date,
-          movingFrom: payload.movingFrom,
-          movingTo: payload.movingTo,
-          note: payload.message,
-        },
-        publicKey,
-      );
+      emailjs.init({ publicKey });
+      await emailjs.send(serviceId, templateId, {
+        name: payload.fullname,
+        email: payload.email,
+        phone: payload.phoneNumber,
+        date: payload.date,
+        movingFrom: payload.movingFrom,
+        movingTo: payload.movingTo,
+        note: payload.message,
+      });
 
       setStatus({ ok: true, msg: "Email sent successfully!" });
     } catch (err) {
