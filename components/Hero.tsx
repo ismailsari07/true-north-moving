@@ -12,9 +12,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
-
 export default function Hero() {
-    const container = {
+  const container = {
     hidden: { opacity: 1 },
     show: {
       opacity: 1,
@@ -57,8 +56,8 @@ export default function Hero() {
             </Link>
           </motion.div>
           <motion.div variants={item}>
-            <Link href="/contact">
-              <Button size={"lg"}>Call Us Today</Button>
+            <Link href="/services">
+              <Button size={"lg"}>Our Services</Button>
             </Link>
           </motion.div>
         </div>
