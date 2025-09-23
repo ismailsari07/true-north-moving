@@ -40,9 +40,15 @@ export default function Services() {
         stress-free.
       </motion.p>
 
-      <motion.div variants={container} className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <motion.div
+        variants={container}
+        className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+      >
         {/* Card 1 */}
-        <motion.div variants={item} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <motion.div
+          variants={item}
+          className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+        >
           <div className="relative h-48 w-full overflow-hidden">
             <Image
               src="/hero3.jpg"
@@ -53,7 +59,10 @@ export default function Services() {
             />
           </div>
           <div className="p-6">
-            <motion.p variants={item} className="text-xl font-semibold text-slate-900">
+            <motion.p
+              variants={item}
+              className="text-xl font-semibold text-slate-900"
+            >
               Residential Moves
             </motion.p>
             <motion.p variants={item} className="mt-2 text-slate-600">
@@ -61,7 +70,10 @@ export default function Services() {
               stress-free.
             </motion.p>
 
-            <motion.div variants={item} className="mt-5 flex items-center gap-3">
+            <motion.div
+              variants={item}
+              className="mt-5 flex items-center gap-3"
+            >
               <Link href="/contact">
                 <Button>Request Service</Button>
               </Link>
@@ -70,7 +82,10 @@ export default function Services() {
         </motion.div>
 
         {/* Card 2 */}
-        <motion.div variants={item} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <motion.div
+          variants={item}
+          className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+        >
           <div className="relative h-48 w-full overflow-hidden">
             <Image
               src="/hero4.jpg"
@@ -81,14 +96,20 @@ export default function Services() {
             />
           </div>
           <div className="p-6">
-            <motion.p variants={item} className="text-xl font-semibold text-slate-900">
+            <motion.p
+              variants={item}
+              className="text-xl font-semibold text-slate-900"
+            >
               Office Relocations
             </motion.p>
             <motion.p variants={item} className="mt-2 text-slate-600">
               Keep business running with organized, efficient office moves.
             </motion.p>
 
-            <motion.div variants={item} className="mt-5 flex items-center gap-3">
+            <motion.div
+              variants={item}
+              className="mt-5 flex items-center gap-3"
+            >
               <Link href="/contact">
                 <Button>Request Service</Button>
               </Link>
@@ -97,7 +118,10 @@ export default function Services() {
         </motion.div>
 
         {/* Card 3 */}
-        <motion.div variants={item} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <motion.div
+          variants={item}
+          className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+        >
           <div className="relative h-48 w-full overflow-hidden">
             <Image
               src="/packing.jpg"
@@ -108,14 +132,20 @@ export default function Services() {
             />
           </div>
           <div className="p-6">
-            <motion.p variants={item} className="text-xl font-semibold text-slate-900">
+            <motion.p
+              variants={item}
+              className="text-xl font-semibold text-slate-900"
+            >
               Packing Support
             </motion.p>
             <motion.p variants={item} className="mt-2 text-slate-600">
               Careful packing supplies and help to protect what matters most.
             </motion.p>
 
-            <motion.div variants={item} className="mt-5 flex items-center gap-3">
+            <motion.div
+              variants={item}
+              className="mt-5 flex items-center gap-3"
+            >
               <Link href="/contact">
                 <Button>Request Service</Button>
               </Link>
@@ -123,10 +153,12 @@ export default function Services() {
           </div>
         </motion.div>
 
-        {/* Card 3 */}
-        <motion.div variants={item} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        {/* Card 4 */}
+        <motion.div
+          variants={item}
+          className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+        >
           <div className="relative h-48 w-full overflow-hidden">
-          
             <Image
               src="/long-distance.jpg"
               alt="Office Relocations"
@@ -143,6 +175,38 @@ export default function Services() {
             <p className="mt-2 text-slate-600">
               We offer trusted long-distance moving services, ensuring safe,
               timely, and stress-free relocations across provinces.
+            </p>
+
+            <div className="mt-5 flex items-center gap-3">
+              <Link href="/contact">
+                <Button>Request Service</Button>
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Card 5 */}
+        <motion.div
+          variants={item}
+          className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+        >
+          <div className="relative h-48 w-full overflow-hidden">
+            <Image
+              src="/truck.jpg"
+              alt="Office Relocations"
+              width={500}
+              height={500}
+              className="h-full w-full object-cover"
+            />
+            <div className="h-full w-full bg-gradient-to-b from-slate-200 to-slate-100" />
+          </div>
+          <div className="p-6">
+            <h3 className="text-xl font-semibold text-slate-900">
+              US–Canada Cross-Border Moves
+            </h3>
+            <p className="mt-2 text-slate-600">
+              We provide seamless US–Canada relocations, handling logistics and
+              customs so belongings arrive safely and on time.
             </p>
 
             <div className="mt-5 flex items-center gap-3">
