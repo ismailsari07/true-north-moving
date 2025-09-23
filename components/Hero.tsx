@@ -40,9 +40,9 @@ export default function Hero() {
       className="flex flex-col items-center gap-6 lg:gap-12 text-center py-8 lg:py-32"
     >
       <div className="flex flex-col items-center justify-center gap-6 md:gap-8">
-        <motion.h1 variants={item} className="text-5xl md:text-8xl md:px-24">
-          Reliable Moving <br /> Made Simple
-        </motion.h1>
+        <motion.div variants={item} className="md:px-24">
+          <Image src={"/logo.jpeg"} alt="logo" width={500} height={500} />
+        </motion.div>
         <motion.p variants={item} className="text-center">
           Trusted movers for homes and offices. <br /> Clear pricing, careful
           handling, and friendly help at every step.
