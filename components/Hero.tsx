@@ -41,7 +41,7 @@ export default function Hero() {
     >
       <div className="flex flex-col items-center justify-center gap-6 md:gap-8">
         <motion.div variants={item} className="md:px-24">
-          <Image src={"/logo.jpeg"} alt="logo" width={500} height={500} />
+          <Image src={"/logo.jpeg"} alt="logo" width={400} height={400} />
         </motion.div>
         <motion.p variants={item} className="text-center">
           Trusted movers for homes and offices. <br /> Clear pricing, careful
