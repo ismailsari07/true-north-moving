@@ -52,7 +52,7 @@ export default function Contact() {
             className="border-2 border-gray-200 rounded-2xl p-4 flex flex-col gap-3"
           >
             <motion.p variants={item} className="font-semibold text-xl">
-              Company
+              Call Us
             </motion.p>
             <motion.a
               variants={item}

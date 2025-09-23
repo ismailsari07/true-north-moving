@@ -12,7 +12,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-
 export default function Navbar() {
   return (
     <nav className="flex justify-between md:justify-evenly items-center p-6 text-lg">
@@ -24,7 +23,7 @@ export default function Navbar() {
         <Link href={"/services"}>Services</Link>
         <Link href={"/contact"}>Contact</Link>
       </div>
-            <div className="block md:hidden">
+      <div className="block md:hidden">
         <Sheet>
           <SheetTrigger asChild>
             <Button variant={"ghost"}>
@@ -33,9 +32,9 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent>
             <SheetHeader>
-              <SheetTitle>Hızlı Erişim</SheetTitle>
+              <SheetTitle>Quick Access</SheetTitle>
               <SheetDescription>
-                Tüm sayfalarımıza kolayca ulaşmak için menüyü kullanın.
+                Use the menu to easily access all our pages.
               </SheetDescription>
             </SheetHeader>
             <div className="flex flex-col items-center gap-4">
@@ -56,7 +55,7 @@ export default function Navbar() {
       <div className="hidden md:block">
         <Button size={"lg"}>
           <Link href={"/contact"} className="flex items-center gap-2">
-          Call Us <ArrowRight size={12} />
+            Call Us <ArrowRight size={12} />
           </Link>
         </Button>
       </div>
