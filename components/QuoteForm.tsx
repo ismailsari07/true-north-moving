@@ -15,6 +15,7 @@ export default function QuoteForm() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setStatus(null);
     const fd = new FormData(e.currentTarget);
 
     const payload = {
@@ -27,6 +28,27 @@ export default function QuoteForm() {
       message: fd.get("message"),
       sizeOfMove: fd.get("sizeOfMove"),
     };
+
+    // Check for required fields
+    const requiredFields = ['fullname', 'email', 'phoneNumber', 'movingFrom', 'movingTo', 'date', 'sizeOfMove', 'notes'];
+    for (const field of requiredFields) {
+      if (!payload[field as keyof typeof payload]) {
+        setStatus({ ok: false, msg: `Please fill in the ${field.replace(/([A-Z])/g, ' $1').toLowerCase()} field` });
+        return;
+      }
+    }
+
+    // Validate email format
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email?.toString() || '')) {
+      setStatus({ ok: false, msg: "Please enter a valid email address" });
+      return;
+    }
+
+    // Validate phone number (at least 10 digits)
+    if (!/^\+?\d{10,}$/.test(payload.phoneNumber?.toString() || '')) {
+      setStatus({ ok: false, msg: "Please enter a valid phone number" });
+      return;
+    }
 
     try {
       // Replace with your actual EmailJS service, template, and public key
@@ -61,6 +83,7 @@ export default function QuoteForm() {
             name="fullname"
             id="full-name"
             placeholder="Full Name"
+            required
           />
         </div>
 
