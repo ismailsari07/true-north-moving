@@ -25,6 +25,7 @@ export default function QuoteForm() {
       movingTo: fd.get("movingTo"),
       date: fd.get("date"),
       message: fd.get("message"),
+      sizeOfMove: fd.get("sizeOfMove"),
     };
 
     try {
@@ -41,8 +42,8 @@ export default function QuoteForm() {
         movingFrom: payload.movingFrom,
         movingTo: payload.movingTo,
         note: payload.message,
+        sizeOfMove: payload.sizeOfMove,
       });
-
       setStatus({ ok: true, msg: "Email sent successfully!" });
     } catch (err) {
       setStatus({ ok: false, msg: "Something went wrong." });
@@ -110,6 +111,24 @@ export default function QuoteForm() {
             placeholder="City/Province"
           />
         </div>
+      </div>
+
+      {/* Size Of Move */}
+      <div className="grid w-full items-center gap-3">
+        <Label htmlFor="sizeOfMove">Size Of Move</Label>
+        <select
+          id="sizeOfMove"
+          name="sizeOfMove"
+          defaultValue=""
+          className="border rounded-md p-2"
+        >
+          <option value="" disabled>
+            Select Size...
+          </option>
+          <option value="1 Bedroom">1 Bedroom</option>
+          <option value="2 Bedroom">2 Bedroom</option>
+          <option value="3 Bedroom">3 Bedroom</option>
+        </select>
       </div>
 
       {/* Notes */}
