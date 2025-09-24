@@ -30,7 +30,7 @@ export default function QuoteForm() {
     };
 
     // Check for required fields
-    const requiredFields = ['fullname', 'email', 'phoneNumber', 'movingFrom', 'movingTo', 'date', 'sizeOfMove', 'notes'];
+    const requiredFields = ['fullname', 'email', 'phoneNumber', 'movingFrom', 'movingTo', 'date', 'sizeOfMove', 'message'];
     for (const field of requiredFields) {
       if (!payload[field as keyof typeof payload]) {
         setStatus({ ok: false, msg: `Please fill in the ${field.replace(/([A-Z])/g, ' $1').toLowerCase()} field` });
