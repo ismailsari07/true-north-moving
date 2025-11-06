@@ -1,37 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# True North Moving — Professional Moving Services in Canada
 
-## Getting Started
+A responsive and modern website built for a Toronto-based moving and storage company.  
+The site highlights services, booking, and contact options in a clean and professional layout.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js** — Framework for fast, scalable, and SEO-friendly web apps  
+- **Tailwind CSS** — Utility-first CSS for responsive and consistent design  
+- **Shadcn UI** — Reusable, accessible UI components  
+- **Framer Motion** — Smooth animations and transitions  
+- **EmailJS** — Sends form submissions directly to company email  
+- **Vercel** — Deployment for high performance and reliability  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Fully responsive design for all devices  
+- Booking form with EmailJS integration  
+- Animated transitions with Framer Motion  
+- SEO-friendly structure and fast page load  
+- Clean and accessible UI with Shadcn components  
+- Deployed and optimized with Vercel  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔗 Links
 
-## Learn More
+- 🌐 **Live Website:** [truenorthmoving.ca](https://www.truenorthmoving.ca/)  
+- 💻 **GitHub Repository:** [github.com/ismailsari07/true-north-moving](https://github.com/ismailsari07/true-north-moving)
 
-To learn more about Next.js, take a look at the following resources:
+## ⚙️ Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+(Coming soon — environment setup and EmailJS configuration will be added here.)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔒 License
 
-## Deploy on Vercel
+Private project — created exclusively for **True North Moving**.  
+Not intended for public redistribution or reuse.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# true-north-moving
