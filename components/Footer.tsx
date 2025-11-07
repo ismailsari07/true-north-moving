@@ -66,6 +66,12 @@ export default function Footer() {
               <PhoneIcon /> 647 600 8515
               <span className="bg-gray-200 p-1 rounded-md text-xs">LOCAL</span>
             </a>
+
+            <a href="tel:+14373184918" className="font-semibold flex gap-3">
+              <PhoneIcon /> 437 3184918
+              <span className="bg-gray-200 p-1 rounded-md text-xs">LOCAL</span>
+            </a>
+
             <a
               href="mailto:info@truenorthmoving.com"
               className="font-semibold flex gap-3 "

@@ -46,7 +46,7 @@ export default function QuoteForm() {
 
     // Validate phone number (at least 10 digits)
     if (!/^\+?\d{10,}$/.test(payload.phoneNumber?.toString() || '')) {
-      setStatus({ ok: false, msg: "Please enter a valid phone number" });
+      setStatus({ ok: false, msg: "Please enter a valid phone number." });
       return;
     }
 

@@ -74,6 +74,14 @@ export default function Contact() {
             </motion.a>
             <motion.a
               variants={item}
+              href="tel:+14373184918"
+              className="font-semibold flex gap-3 hover:text-blue-600 transition-colors"
+            >
+              <PhoneIcon /> 437 318 4918
+              <span className="bg-gray-200 p-1 rounded-md text-xs">LOCAL</span>
+            </motion.a>
+            <motion.a
+              variants={item}
               href="mailto:info@truenorthmoving.com"
               className="font-semibold flex gap-3 hover:text-blue-600 transition-colors"
             >
